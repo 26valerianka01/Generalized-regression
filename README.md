@@ -97,55 +97,57 @@ $$
 Тогда нормальные уравнения принимают вид:
 
 $$
-\begin{aligned}
-A\langle f_i f_i \rangle + B\langle f_i g_i \rangle + C\langle f_i h_i \rangle + D\langle f_i p_i \rangle + E\langle f_i q_i \rangle &= \langle f_i y_i \rangle \\
-A\langle g_i f_i \rangle + B\langle g_i g_i \rangle + C\langle g_i h_i \rangle + D\langle g_i p_i \rangle + E\langle g_i q_i \rangle &= \langle g_i y_i \rangle \\
-A\langle h_i f_i \rangle + B\langle h_i g_i \rangle + C\langle h_i h_i \rangle + D\langle h_i p_i \rangle + E\langle h_i q_i \rangle &= \langle h_i y_i \rangle \\
-A\langle p_i f_i \rangle + B\langle p_i g_i \rangle + C\langle p_i h_i \rangle + D\langle p_i p_i \rangle + E\langle p_i q_i \rangle &= \langle p_i y_i \rangle \\
-A\langle q_i f_i \rangle + B\langle q_i g_i \rangle + C\langle q_i h_i \rangle + D\langle q_i p_i \rangle + E\langle q_i q_i \rangle &= \langle q_i y_i \rangle
-\end{aligned}
+A\langle f_i f_i \rangle + B\langle f_i g_i \rangle + C\langle f_i h_i \rangle + D\langle f_i p_i \rangle + E\langle f_i q_i \rangle = \langle f_i y_i \rangle
+$$
+
+$$
+A\langle g_i f_i \rangle + B\langle g_i g_i \rangle + C\langle g_i h_i \rangle + D\langle g_i p_i \rangle + E\langle g_i q_i \rangle = \langle g_i y_i \rangle
+$$
+
+$$
+A\langle h_i f_i \rangle + B\langle h_i g_i \rangle + C\langle h_i h_i \rangle + D\langle h_i p_i \rangle + E\langle h_i q_i \rangle = \langle h_i y_i \rangle
+$$
+
+$$
+A\langle p_i f_i \rangle + B\langle p_i g_i \rangle + C\langle p_i h_i \rangle + D\langle p_i p_i \rangle + E\langle p_i q_i \rangle = \langle p_i y_i \rangle
+$$
+
+$$
+A\langle q_i f_i \rangle + B\langle q_i g_i \rangle + C\langle q_i h_i \rangle + D\langle q_i p_i \rangle + E\langle q_i q_i \rangle = \langle q_i y_i \rangle
 $$
 
 В матричной форме:
 
 $$
-M \begin{pmatrix} A \\ B \\ C \\ D \\ E \end{pmatrix}
-=
-\begin{pmatrix}
-\langle f_i y_i \rangle \\
-\langle g_i y_i \rangle \\
-\langle h_i y_i \rangle \\
-\langle p_i y_i \rangle \\
-\langle q_i y_i \rangle
-\end{pmatrix}
+M \cdot \mathbf{c} = \mathbf{b}
 $$
 
-где симметричная матрица средних произведений базисных функций:
+где вектор коэффициентов и правая часть:
 
 $$
-M =
-\begin{pmatrix}
-\langle f_i f_i \rangle & \langle f_i g_i \rangle & \langle f_i h_i \rangle & \langle f_i p_i \rangle & \langle f_i q_i \rangle \\
-\langle g_i f_i \rangle & \langle g_i g_i \rangle & \langle g_i h_i \rangle & \langle g_i p_i \rangle & \langle g_i q_i \rangle \\
-\langle h_i f_i \rangle & \langle h_i g_i \rangle & \langle h_i h_i \rangle & \langle h_i p_i \rangle & \langle h_i q_i \rangle \\
-\langle p_i f_i \rangle & \langle p_i g_i \rangle & \langle p_i h_i \rangle & \langle p_i p_i \rangle & \langle p_i q_i \rangle \\
-\langle q_i f_i \rangle & \langle q_i g_i \rangle & \langle q_i h_i \rangle & \langle q_i p_i \rangle & \langle q_i q_i \rangle
-\end{pmatrix}
+\mathbf{c} = (A,\ B,\ C,\ D,\ E)^T
+$$
+
+$$
+\mathbf{b} = \left( \langle f_i y_i \rangle,\ \langle g_i y_i \rangle,\ \langle h_i y_i \rangle,\ \langle p_i y_i \rangle,\ \langle q_i y_i \rangle \right)^T
+$$
+
+Симметричная матрица средних произведений базисных функций:
+
+$$
+M = \begin{pmatrix} \langle f_i f_i \rangle & \langle f_i g_i \rangle & \langle f_i h_i \rangle & \langle f_i p_i \rangle & \langle f_i q_i \rangle \\\\ \langle g_i f_i \rangle & \langle g_i g_i \rangle & \langle g_i h_i \rangle & \langle g_i p_i \rangle & \langle g_i q_i \rangle \\\\ \langle h_i f_i \rangle & \langle h_i g_i \rangle & \langle h_i h_i \rangle & \langle h_i p_i \rangle & \langle h_i q_i \rangle \\\\ \langle p_i f_i \rangle & \langle p_i g_i \rangle & \langle p_i h_i \rangle & \langle p_i p_i \rangle & \langle p_i q_i \rangle \\\\ \langle q_i f_i \rangle & \langle q_i g_i \rangle & \langle q_i h_i \rangle & \langle q_i p_i \rangle & \langle q_i q_i \rangle \end{pmatrix}
 $$
 
 Решение через обратную матрицу:
 
 $$
-\begin{pmatrix} A \\ B \\ C \\ D \\ E \end{pmatrix}
-=
-M^{-1}
-\begin{pmatrix}
-\langle f_i y_i \rangle \\
-\langle g_i y_i \rangle \\
-\langle h_i y_i \rangle \\
-\langle p_i y_i \rangle \\
-\langle q_i y_i \rangle
-\end{pmatrix}
+\mathbf{c} = M^{-1} \mathbf{b}
+$$
+
+или подробно:
+
+$$
+(A,\ B,\ C,\ D,\ E)^T = M^{-1} \left( \langle f_i y_i \rangle,\ \langle g_i y_i \rangle,\ \langle h_i y_i \rangle,\ \langle p_i y_i \rangle,\ \langle q_i y_i \rangle \right)^T
 $$
 
 На практике систему решают численно (`numpy.linalg.solve`), что эквивалентно умножению на $M^{-1}$, но обычно устойчивее.
@@ -219,11 +221,7 @@ python model_logarithmic.py
 Базисные функции:
 
 $$
-f(x) = 1,\quad
-g(x) = x,\quad
-h(x) = x^2,\quad
-p(x, T) = \sin\left(\frac{2\pi}{T} x\right),\quad
-r(x, k) = e^{k x}
+f(x) = 1, \quad g(x) = x, \quad h(x) = x^2, \quad p(x, T) = \sin\left(\frac{2\pi}{T} x\right), \quad r(x, k) = e^{k x}
 $$
 
 Параметры: $T = 40$, $k = 0.01$.
@@ -231,13 +229,7 @@ $$
 Коэффициенты:
 
 $$
-\begin{aligned}
-A &= 366.4900 \\
-B &= 4.2704 \\
-C &= 0.0383 \\
-D &= 23.0849 \\
-E &= -292.5075
-\end{aligned}
+A = 366.4900, \quad B = 4.2704, \quad C = 0.0383, \quad D = 23.0849, \quad E = -292.5075
 $$
 
 **RMSE: 111.30**
@@ -251,15 +243,11 @@ $$
 Базисные функции:
 
 $$
-\begin{aligned}
-f(x) &= 1,\quad
-g(x) = x,\quad
-h(x) = x^2,\quad
-s(x) = x^3,\quad
-t(x) = x^4 \\
-p(x, \omega) &= \sin(\omega x),\quad
-r(x, k) = e^{k x}
-\end{aligned}
+f(x) = 1, \quad g(x) = x, \quad h(x) = x^2, \quad s(x) = x^3, \quad t(x) = x^4
+$$
+
+$$
+p(x, \omega) = \sin(\omega x), \quad r(x, k) = e^{k x}
 $$
 
 Используются три синусоиды с периодами $20$, $40$, $60$ и экспонента с $k = 0.005$.
@@ -275,15 +263,15 @@ $$
 Базисные функции:
 
 $$
-\begin{aligned}
-f(x) &= 1,\quad
-g(x) = x,\quad
-h(x) = x^2 \\
-p_{\text{short}}(x) &= \sin\left(\frac{2\pi}{20} x\right),\quad
-p_{\text{long}}(x) = \sin\left(\frac{2\pi}{60} x\right) \\
-r(x) &= e^{0.005 x},\quad
-s(x) = \ln(x + 1)
-\end{aligned}
+f(x) = 1, \quad g(x) = x, \quad h(x) = x^2
+$$
+
+$$
+p_{\mathrm{short}}(x) = \sin\left(\frac{2\pi}{20} x\right), \quad p_{\mathrm{long}}(x) = \sin\left(\frac{2\pi}{60} x\right)
+$$
+
+$$
+r(x) = e^{0.005 x}, \quad s(x) = \ln(x + 1)
 $$
 
 **RMSE: 99.20**
